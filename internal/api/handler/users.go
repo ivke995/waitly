@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 	"waitly/internal/api"
 	"waitly/internal/api/data"
@@ -18,8 +17,6 @@ type User struct {
 
 func GetUsers(c echo.Context) error {
 	db, err := api.GetDB()
-
-	fmt.Print("db loaded", db)
 
 	if err != nil {
 		return err
