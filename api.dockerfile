@@ -18,4 +18,4 @@ COPY . .
 RUN go build -o main ./cmd/api
 
 # Run the app
-CMD ["./api"]
+CMD ["./main"]
