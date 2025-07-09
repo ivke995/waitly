@@ -15,6 +15,7 @@ func main() {
 
 	e.GET("/users", handler.GetUsers)
 	e.POST("/user-db-create", handler.CreateUserDatabase)
+	e.POST("/signup", handler.InsertUser)
 
 	e.Logger.Fatal(e.Start(":8080"))
 
