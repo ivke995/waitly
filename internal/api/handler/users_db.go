@@ -28,8 +28,6 @@ func CreateUserDatabase(c echo.Context) error {
 	group := os.Getenv("TURSO_GROUP_NAME")
 	token := os.Getenv("TURSO_ORG_TOKEN")
 
-	fmt.Print(orgSlug, group, token)
-
 	if orgSlug == "" || group == "" || token == "" {
 		return echo.NewHTTPError(http.StatusInternalServerError, "Missing required env vars")
 	}
